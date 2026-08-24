@@ -3,19 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link, useNavigate, useSearchParams, useParams, Navigate } from "react-router-dom";
 import "./styles.css";
 
-/* ================================================================
-   TripWise — single-file React app
-   Sections below, in order:
-   1. Data (destinations, recommended hotels, categories, regions)
-   2. Assistant logic (local FAQ-style matcher)
-   3. App context (auth, planned visits, visited places, hotel reviews)
-   4. Components (Navbar, PlaceCard, HotelCard, PlaceModal, AssistantWidget)
-   5. Pages (Home, Explore, MyTrips, Account, Login, Signup)
-   6. App (routes) + render
-   ================================================================ */
-
-/* ---------------- 1. DATA ---------------- */
-
 const categories = ["All", "Hill Station", "Plains", "Beach", "Desert", "Forest"];
 const regions = ["All", "North", "South", "East", "West", "Northeast", "Islands"];
 
@@ -85,7 +72,7 @@ const initialPlaces = [
   { id: 62, name: "Ranthambore", region: "North", category: "Forest", icon: "🐅", artColor: "#eef0d4", image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80", bestTime: "Oct - Jun", weather: "Warm", desc: "A Rajasthan tiger reserve set among ancient fort ruins and dry deciduous forest.", hotels: [{ name: "Tiger Trail Resort", price: "₹2800/night" }, { name: "Fort Edge Camp", price: "₹1700/night" }], maxVisitors: 45, currentVisitors: 22 }
 ];
 
-// Recommended Hotels linked to real destinations
+
 const recommendedHotels = [
   {
     id: "rec_1",
