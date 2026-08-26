@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore — TripWise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="p.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="p.html">Trip<span>Wise</span></a></div>
+  <div class="navLinks">
+    <a href="p.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a onclick="openAssistant()">Ask TripWise</a>
+    <span id="authNavSlot" class="authNavSlot"></span>
+  </div>
+</nav>
+
+<header class="hero exploreHero">
+  <div class="eyebrow">India &middot; Tourism Guide</div>
+  <h1>Explore every destination.</h1>
+  <p>Search by name, or filter by terrain and region — from the Himalayas to the islands.</p>
+
+  <div class="searchBar">
+    <input type="text" id="searchInput" placeholder="Search a place... e.g. Munnar">
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="filterRow" id="categoryFilterRow"></div>
+  <div class="filterRow regionRow" id="regionFilterRow"></div>
+</header>
+
+<section class="sectionWrap exploreCardsSection" id="placesSection">
+  <div class="sectionHead">
+    <h2>All Destinations</h2>
+    <div class="count mono" id="resultCount"></div>
+  </div>
+  <div class="cardGrid" id="cardGrid"></div>
+</section>
+
+<section class="sectionWrap hotelsSection" id="exploreHotelsSection">
+  <div class="sectionHead">
+    <h2>Recommended Hotels & Stays</h2>
+    <div class="count mono" id="hotelResultCount">Handpicked stays across top spots</div>
+  </div>
+  <div class="cardGrid" id="exploreHotelsGrid"></div>
+</section>
+
+<footer>Built as a university project — crowd numbers are simulated for demo purposes.</footer>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<!-- AI TRIP ASSISTANT -->
+<button class="assistantToggle" id="assistantToggle" onclick="openAssistant()">💬 Ask TripWise</button>
+
+<div class="assistantPanel" id="assistantPanel">
+  <div class="assistantHead">
+    <span>TripWise Assistant</span>
+    <button class="closeBtn" id="closeAssistantBtn">✕</button>
+  </div>
+  <div class="assistantMessages" id="assistantMessages">
+    <div class="assistantMsg bot">Hi! Tell me what kind of trip you're looking for — like "somewhere cold and quiet in June" — and I'll suggest a place from the list.</div>
+  </div>
+  <div class="assistantInputRow">
+    <input type="text" id="assistantInput" placeholder="Describe the trip you want...">
+    <button id="assistantSendBtn">Send</button>
+  </div>
+</div>
+
+<script src="p.js"></script>
+
+</body>
+</html>
