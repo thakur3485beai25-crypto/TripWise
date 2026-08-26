@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripWise — Smarter Travel Across India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="p.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="p.html">Trip<span>Wise</span></a></div>
+  <div class="navLinks">
+    <a href="p.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a onclick="openAssistant()">Ask TripWise</a>
+    <span id="authNavSlot" class="authNavSlot"></span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">India &middot; Live Crowd-Aware Tourism</div>
+  <h1>Know before you go &mdash;<br>and how crowded it'll be.</h1>
+  <p>From hill stations to deserts, beaches to forests &mdash; check the best season, compare hotels, and plan your visit against each spot's daily footfall limit.</p>
+  <div class="heroBtns">
+    <a href="explore.html" class="heroPrimary">Explore all 63 destinations &rarr;</a>
+    <button class="heroSecondary" onclick="openAssistant()">💬 Ask TripWise</button>
+  </div>
+</header>
+
+<section class="sectionWrap" id="featuredSection">
+  <div class="sectionHead">
+    <h2>Featured Destinations</h2>
+    <a href="explore.html" class="seeAllLink">See all 63 &rarr;</a>
+  </div>
+  <div class="cardGrid" id="featuredGrid"></div>
+</section>
+
+<section class="sectionWrap hotelsSection" id="hotelsSection">
+  <div class="sectionHead">
+    <h2>Recommended Hotels</h2>
+    <div class="count mono">Handpicked stays across top spots</div>
+  </div>
+  <div class="cardGrid" id="recommendedHotelsGrid"></div>
+</section>
+
+<footer>Built as a university project — crowd numbers are simulated for demo purposes.</footer>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<!-- AI TRIP ASSISTANT -->
+<button class="assistantToggle" id="assistantToggle" onclick="openAssistant()">💬 Ask TripWise</button>
+
+<div class="assistantPanel" id="assistantPanel">
+  <div class="assistantHead">
+    <span>TripWise Assistant</span>
+    <button class="closeBtn" id="closeAssistantBtn">✕</button>
+  </div>
+  <div class="assistantMessages" id="assistantMessages">
+    <div class="assistantMsg bot">Hi! Tell me what kind of trip you're looking for — like "somewhere cold and quiet in June" — and I'll suggest a place from the list.</div>
+  </div>
+  <div class="assistantInputRow">
+    <input type="text" id="assistantInput" placeholder="Describe the trip you want...">
+    <button id="assistantSendBtn">Send</button>
+  </div>
+</div>
+
+<script src="p.js"></script>
+
+</body>
+</html>
